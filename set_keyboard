@@ -1,0 +1,25 @@
+##========-----{|> Conf para setar a centuação correta de teclados
+##========-----{|> Colocar esse arquivo em ~/.bashrc ou ~/.profile
+
+
+###> PT-BR ABNT2
+setxkbmap -model abnt2 -layout br
+
+###> EN-US-Intenational
+setxbmap -model pc104 -layout us_intl
+
+
+###> Auto completar com a tecla TAB
+if ! shopt -oq posix; then
+
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+
+    . /usr/share/bash-completion/bash_completion
+
+  elif [ -f /etc/bash_completion ]; then
+
+    . /etc/bash_completion
+
+  fi
+
+fi
